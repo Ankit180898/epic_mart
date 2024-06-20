@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/route_manager.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class AppDeviceUtils {
   static void hideKeyboard(BuildContext context) {
@@ -75,5 +79,21 @@ class AppDeviceUtils {
 
   static void hideStatusBar() {
     SystemChrome.setEnabledSystemUIMode;
+  }
+
+  static bool isIOS() {
+    return Platform.isIOS;
+  }
+
+  static bool isAndroid() {
+    return Platform.isAndroid;
+  }
+
+  static void launchUrl(String url) async {
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url);
+    } else {
+      throw "Cound not launch $url";
+    }
   }
 }
