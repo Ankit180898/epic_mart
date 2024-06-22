@@ -26,6 +26,11 @@ class AppHttpHelper {
     return handleResponse(response);
   }
 
+   static Future<Map<String, dynamic>> delete(String endpoint) async {
+    final response = await http.delete(Uri.parse('$baseUrl/$endpoint'));
+    return handleResponse(response);
+  }
+
   // Handle the HTTP Response
   static Map<String, dynamic> handleResponse(http.Response response) {
     if (response.statusCode == 200) {

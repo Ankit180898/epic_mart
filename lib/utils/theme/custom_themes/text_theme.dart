@@ -40,6 +40,7 @@ class AppTextTheme {
         fontWeight: FontWeight.normal,
         color: Colors.black.withOpacity(0.5)),
   );
+  
   static TextTheme darkTextTheme = TextTheme(
     headlineLarge: const TextStyle(
         fontFamily: 'Popins',

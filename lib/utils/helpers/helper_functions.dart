@@ -30,6 +30,7 @@ class AppHelperFunctions {
     if (value == 'White') {
       return Colors.white;
     }
+    return null;
   }
 
   static void showSnackbar(String message) {
