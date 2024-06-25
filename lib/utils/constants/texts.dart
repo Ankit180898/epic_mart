@@ -2,7 +2,7 @@ class AppTexts {
   AppTexts._();
 
   // -- OnBoarding Texts
-  static const String onBoardingTitlel = "Choose your product";
+  static const String onBoardingTitle1 = "Choose your product";
   static const String onBoardingTitle2 = "Select Payment Method";
   static const String onBoardingTitle3 = "Deliver at your door step";
   static const String onBoardingSubTitle1 =
