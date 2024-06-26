@@ -5,17 +5,17 @@ class AppTextTheme {
 
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle(
-        fontFamily: 'Popins',
+        fontFamily: 'Poppins',
         fontSize: 32,
         fontWeight: FontWeight.bold,
         color: Colors.black),
     headlineMedium: const TextStyle(
-        fontFamily: 'Popins',
+        fontFamily: 'Poppins',
         fontSize: 24,
         fontWeight: FontWeight.w600,
         color: Colors.black),
     headlineSmall: const TextStyle(
-        fontFamily: 'Popins',
+        fontFamily: 'Poppins',
         fontSize: 16,
         fontWeight: FontWeight.w400,
         color: Colors.black),
@@ -40,20 +40,20 @@ class AppTextTheme {
         fontWeight: FontWeight.normal,
         color: Colors.black.withOpacity(0.5)),
   );
-  
+
   static TextTheme darkTextTheme = TextTheme(
     headlineLarge: const TextStyle(
-        fontFamily: 'Popins',
+        fontFamily: 'Poppins',
         fontSize: 32,
         fontWeight: FontWeight.bold,
         color: Colors.white),
     headlineMedium: const TextStyle(
-        fontFamily: 'Popins',
+        fontFamily: 'Poppins',
         fontSize: 24,
         fontWeight: FontWeight.w600,
         color: Colors.white),
     headlineSmall: const TextStyle(
-        fontFamily: 'Popins',
+        fontFamily: 'Poppins',
         fontSize: 16,
         fontWeight: FontWeight.w400,
         color: Colors.white),

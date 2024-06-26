@@ -1,7 +1,8 @@
+import 'package:epic_mart/features/authentication/screens/widgets/onboarding_navigation.dart';
+import 'package:epic_mart/features/authentication/screens/widgets/onboarding_page.dart';
+import 'package:epic_mart/features/authentication/screens/widgets/onboarding_skip.dart';
 import 'package:epic_mart/utils/constants/image_strings.dart';
-import 'package:epic_mart/utils/constants/sizes.dart';
 import 'package:epic_mart/utils/constants/texts.dart';
-import 'package:epic_mart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -13,30 +14,29 @@ class OnboardingScreen extends StatelessWidget {
       body: Stack(
         children: [
           PageView(
-            children: [
-              Column(
-                children: [
-                  Image.asset(
-                      width: AppHelperFunctions.screenWidth() * 0.80,
-                      height: AppHelperFunctions.screenHeight() * 0.60,
-                      AppImages.google),
-                  Text(
-                    AppTexts.onBoardingTitle1,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                    textAlign: TextAlign.center,
-                  ),
-                   SizedBox(height: AppSizes.spaceBtwItems,),
-                  Text(
-                    AppTexts.onBoardingSubTitle1,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              )
+            children: const [
+              OnBoardingPage(
+                image: AppImages.facebook,
+                title: AppTexts.onBoardingTitle1,
+                subTitle: AppTexts.onBoardingSubTitle1,
+              ),
+              OnBoardingPage(
+                image: AppImages.facebook,
+                title: AppTexts.onBoardingTitle2,
+                subTitle: AppTexts.onBoardingSubTitle2,
+              ),
+              OnBoardingPage(
+                image: AppImages.facebook,
+                title: AppTexts.onBoardingTitle3,
+                subTitle: AppTexts.onBoardingSubTitle3,
+              ),
             ],
-          )
+          ),
+          const OnBoardingSkip(),
+          const OnBoardingNavigation()
         ],
       ),
     );
   }
 }
+
