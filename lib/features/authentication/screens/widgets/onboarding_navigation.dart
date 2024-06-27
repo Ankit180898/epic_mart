@@ -1,4 +1,5 @@
-
+import 'package:epic_mart/features/authentication/controllers/onboarding_controller.dart';
+import 'package:epic_mart/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -13,14 +14,18 @@ class OnBoardingNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = OnboardingController.instance;
+    final dark = AppHelperFunctions.isDarkMode(context);
     return Positioned(
         bottom: AppDeviceUtils.getBottomNavigationBarHeight() + 25,
         left: AppSizes.defaultSpace,
         child: SmoothPageIndicator(
+          onDotClicked: controller.dotNavigationClick,
           controller: PageController(),
           count: 3,
-          effect: const ExpandingDotsEffect(
-              activeDotColor: AppColors.black, dotHeight: 6),
+          effect: ExpandingDotsEffect(
+              activeDotColor: dark ? AppColors.bgLight : AppColors.bgDark,
+              dotHeight: 6),
         ));
   }
 }

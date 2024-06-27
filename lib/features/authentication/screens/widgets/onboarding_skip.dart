@@ -1,3 +1,4 @@
+import 'package:epic_mart/features/authentication/controllers/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/constants/sizes.dart';
@@ -15,7 +16,7 @@ class OnBoardingSkip extends StatelessWidget {
       right: AppSizes.defaultSpace,
         child: TextButton(
       child: const Text("Skip"),
-      onPressed: () {},
+      onPressed: () => OnboardingController.instance.skipPage,
     ));
   }
 }
