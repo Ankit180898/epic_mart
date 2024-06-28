@@ -18,11 +18,7 @@ class OnBoardingPage extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
-            Container(
-              width: AppHelperFunctions.screenWidth() * 0.80,
-              height: AppHelperFunctions.screenHeight() * 0.60,
-              color: AppColors.accent,
-            ),
+            
             Image(
               width: AppHelperFunctions.screenWidth() * 0.80,
               height: AppHelperFunctions.screenHeight() * 0.60,

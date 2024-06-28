@@ -21,7 +21,7 @@ class OnBoardingNavigation extends StatelessWidget {
         left: AppSizes.defaultSpace,
         child: SmoothPageIndicator(
           onDotClicked: controller.dotNavigationClick,
-          controller: PageController(),
+          controller: controller.pageController,
           count: 3,
           effect: ExpandingDotsEffect(
               activeDotColor: dark ? AppColors.bgLight : AppColors.bgDark,
