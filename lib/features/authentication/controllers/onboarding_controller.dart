@@ -1,3 +1,4 @@
+import 'package:epic_mart/features/authentication/screens/login/login_screen.dart';
 import 'package:epic_mart/utils/logging/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,7 +33,7 @@ class OnboardingController extends GetxController {
 
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      // Get.to(LoginScreen());
+      Get.to(const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.animateToPage(
