@@ -22,8 +22,9 @@ class LoginScreen extends StatelessWidget {
               Column(
                 children: [
                   Image(
-                      image: AssetImage(
-                          dark ? AppImages.darkAppLogo : AppImages.lightAppLogo)),
+                      image: AssetImage(dark
+                          ? AppImages.darkAppLogo
+                          : AppImages.lightAppLogo)),
                   //this will be changed
                   Text(
                     AppTexts.homeAppbarTitle,
@@ -38,24 +39,54 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-               Form(
-            child: Column(
-            children: [
-              //Email
-              TextFormField(
-                decoration: InputDecoration(
-                  prefixIcon: Icon(Iconsax.direct_right),
-                  labelText: AppTexts.email,
-                  
+              Form(
+                child: Column(
+                  children: [
+                    //Email
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Iconsax.direct_right),
+                        labelText: AppTexts.email,
+                      ),
+                    ),
 
+                    const SizedBox(
+                      height: AppSizes.spaceBtwInputFields,
+                    ),
+                    // password
+
+                    TextFormField(
+                      decoration: const InputDecoration(
+                          prefixIcon: Icon(Iconsax.password_check),
+                          labelText: AppTexts.password,
+                          suffix: Icon(Iconsax.eye_slash)),
+                    ),
+                    const SizedBox(
+                      height: AppSizes.spaceBtwInputFields / 2,
+                    ),
+
+                    // Remember Me & Forgot Password
+                    Row(
+                      children: [
+                        Row(
+                          children: [
+                            Checkbox(value: true, onChanged: (value) {}),
+                            const Text(AppTexts.rememberMe)
+                          ],
+                        ),
+
+                        //Forget password
+                        TextButton(
+                            onPressed: () {},
+                            child: const Text(AppTexts.forgetPassword))
+                      ],
+                    ),
+                     const SizedBox(height: AppSizes.spaceBtwSections,)
+                  ],
                 ),
               )
-
-            ],
-          ),)
             ],
           ),
-          
         ),
       ),
     );
